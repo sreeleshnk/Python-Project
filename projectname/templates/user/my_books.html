@@ -1,0 +1,120 @@
+{% extends 'user/base.html' %}
+{% block body %}
+
+<div class="details">
+    <div class="recentOrders">
+        <div class="cardHeader">
+            <h2>All Orders</h2>
+            <!-- <a href="#" class="btn">View All</a> -->
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <td>Book Name</td>
+                    <td>Author Name</td>
+                    <td>Price</td>
+                    <td>Image</td>
+                    <!-- <td>Address</td> -->
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for item in b %}
+                <tr>
+                    <td>{{item.book_name}}</td>
+                    <td>{{item.author}}</td>
+                    <td>{{item.price}}</td>
+                    <td><img width="40px" src="{{item.image.url}}" alt="No Image"></td>
+                    <!-- <td>{{item.address}}</td> -->
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ================= New Customers ================ -->
+    <!-- <div class="recentCustomers">
+        <div class="cardHeader">
+            <h2>Recent Customers</h2>
+        </div>
+
+        <table>
+            <tr>
+                <td width="60px">
+                    <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""></div>
+                </td>
+                <td>
+                    <h4>David <br> <span>Italy</span></h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="60px">
+                    <div class="imgBx"><img src="assets/imgs/customer01.jpg" alt=""></div>
+                </td>
+                <td>
+                    <h4>Amit <br> <span>India</span></h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="60px">
+                    <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""></div>
+                </td>
+                <td>
+                    <h4>David <br> <span>Italy</span></h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="60px">
+                    <div class="imgBx"><img src="assets/imgs/customer01.jpg" alt=""></div>
+                </td>
+                <td>
+                    <h4>Amit <br> <span>India</span></h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="60px">
+                    <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""></div>
+                </td>
+                <td>
+                    <h4>David <br> <span>Italy</span></h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="60px">
+                    <div class="imgBx"><img src="assets/imgs/customer01.jpg" alt=""></div>
+                </td>
+                <td>
+                    <h4>Amit <br> <span>India</span></h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="60px">
+                    <div class="imgBx"><img src="assets/imgs/customer01.jpg" alt=""></div>
+                </td>
+                <td>
+                    <h4>David <br> <span>Italy</span></h4>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="60px">
+                    <div class="imgBx"><img src="assets/imgs/customer02.jpg" alt=""></div>
+                </td>
+                <td>
+                    <h4>Amit <br> <span>India</span></h4>
+                </td>
+            </tr>
+        </table>
+    </div> -->
+</div>
+</div>
+</div>
+{% endblock %}
